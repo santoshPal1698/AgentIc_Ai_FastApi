@@ -25,7 +25,7 @@ async def generate_from_google(prompt: str) -> str:
 # ---------------------------------------------------------------------------
 # Original JS resolved: path.resolve(__dirname, "../../uploads/Ai_FullStack_Dev-2026.pdf")
 # ai.services.js lives in app/services/, so ../../uploads -> project_root/uploads
-RESUME_PATH = Path(__file__).resolve().parent.parent.parent / "uploads" / "Ai_FullStack_Dev-2026.pdf"
+RESUME_PATH = Path(__file__).resolve().parent.parent.parent / "upload" / "Santosh_Full_STACK_26.pdf"
 print("Resume text",RESUME_PATH)
 
 
