@@ -1,13 +1,16 @@
 import os
 import httpx
 from fastapi import HTTPException
-from app.schemas import ChatRequest, ChatResponse, GoogleAIRequest
+# from app.schemas import ChatRequest, ChatResponse, GoogleAIRequest
 from app.services.ai_services import generate_from_google, get_resume_text, get_system_prompt
+
+from app.schemas import ChatRequest, ChatResponse, GoogleAIRequest
 
 
 async def chat_bot_controller(body: ChatRequest) -> ChatResponse:
     """Equivalent of chatBotController in ai.controller.js"""
     resume_text = get_resume_text()
+    print("Resume data",resume_text)
     if not resume_text:
         raise HTTPException(status_code=500, detail="Resume not loaded")
 

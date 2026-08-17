@@ -4,3 +4,5 @@ __pycache__/,
 and 
 .env
 venv
+credentials
+credentials.txt
